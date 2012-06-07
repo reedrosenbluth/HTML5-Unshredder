@@ -136,7 +136,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #002b36;
 }
 a {
   color: #0088cc;
@@ -345,7 +345,7 @@ h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
-  color: inherit;
+  color: #93a1a1;
   text-rendering: optimizelegibility;
 }
 h1 small,
@@ -3989,7 +3989,7 @@ a.thumbnail:hover {
 
 #drop_zone {
   display: block;
-  border: 2px dashed #BBB;
+  border: 2px dashed #93a1a1;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -3999,12 +3999,12 @@ a.thumbnail:hover {
   position:absolute;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -330px;
+  margin:-75px 0 0 -352px;
 }
 
 #drop_zone.hover {
   display: block;
-  border: 2px dashed #E01B1B;
+  border: 2px dashed #b58900;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -4014,19 +4014,16 @@ a.thumbnail:hover {
   position:absolute;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -330px;
+  margin:-75px 0 0 -352px;
 }
     
 canvas {
-  border: 2px dashed #BBB;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+ /* border: 2px dashed #BBB;*/
   display: none; 
   top: 50%;
   left: 50%;
   margin: -170px 0 0 -305px;
-  padding: 10px 0 0 10px;
+  padding: 5px;
   position: absolute;
 }
 
