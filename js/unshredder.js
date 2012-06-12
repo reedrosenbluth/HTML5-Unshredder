@@ -1,29 +1,29 @@
-dropzone = $('#drop_zone')[0];
-unshreddedImage = $('#unshreddedImage')[0];
-ctx = $('#unshreddedImage')[0].getContext("2d");
-width = $('#unshreddedImage').width();
-height = $('#unshreddedImage').height();
-currentWidth = 0;
-strips = [];
-sequence = [];
+var $dropzone = $('#drop_zone')[0];
+var $unshreddedImage = $('#unshreddedImage')[0];
+var ctx = $unshreddedImage.getContext("2d");
+var $width = $('#unshreddedImage').width();
+var $height = $('#unshreddedImage').height();
+var currentWidth = 0;
+var strips = [];
+var sequence = [];
 
 
-dropzone.ondragover = function () {
+$dropzone.ondragover = function () {
   this.className = 'hover';
   return false;
 };
 
-dropzone.ondragenter = function () {
+$dropzone.ondragenter = function () {
   this.className = 'hover';
   return false;
 };
 
-dropzone.ondragleave = function () {
+$dropzone.ondragleave = function () {
   this.className = '';
   return false;
 };
 
-dropzone.ondrop = function (e) {
+$dropzone.ondrop = function (e) {
   e.preventDefault();
 
   var file = e.dataTransfer.files[0];
@@ -45,6 +45,7 @@ dropzone.ondrop = function (e) {
 
   return false;
 };
+
 
 function rgbToHue (r, g, b) {
   if (r == b && g == b) {
@@ -78,7 +79,7 @@ function unshred() {
     var imageData = ctx.getImageData(i*32, 0, 32, 359);
     strips.push(imageData);
   }
-  ctx.clearRect(0, 0, width, height);
+  ctx.clearRect(0, 0, $width, $height);
 
   sequence.push(strips[0]);
   strips.splice(0, 1);
@@ -106,7 +107,11 @@ function unshred() {
   for (i = 0; i < 20; i++) {
     ctx.putImageData(sequence[i], i*32, 0);
   }
+  $('#buttons').hide();
 }
+
+
+$('#startbutton').on('click', unshred);
 
 
 
