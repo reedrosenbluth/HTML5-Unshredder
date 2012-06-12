@@ -12,7 +12,7 @@
 <body>
   <div id="mastheadbackground"></div>
   <div id="header">
-    <h1 class="title">HTML5 Unshredder</h1>
+    <h1 class="title"><a href="index.html">HTML5 Unshredder</a></h1>
     <p class="by" id="autor">by Reed Rosenbluth</p>
   </div>
 
@@ -23,11 +23,20 @@
 
   <div id="buttons">
     <!-- <a class="btn btn-danger btn-large" href="javascript:void(0);" id="startbutton" onclick="unshred();">Unshred!!!</a> -->
-    <a class="btn btn-danger btn-large" id="startbutton" href="#" onclick="return false">Unshred</a>
+    <!-- <a class="btn btn-danger btn-large" id="startbutton" href="#" onclick="return false">Unshred</a> -->
+    <button class="btn btn-inverse btn-large" type="submit" id="startbutton">Unshred</button>
   </div>
 
   <footer>
-
+    <div id="thumbnails">
+      <h2 class="thumbnails">
+        <a id="tokyo" href="#" onclick="loadImage('tokyo.png')">tokyo</a>
+        •
+        <a id="bridge" href="#" onclick="loadImage('bridge.png')">bridge</a>
+        •
+        <a id="flowers" href="#" onclick="loadImage('flowers.png')">flowers</a>
+      </h2>
+    </div>
   </footer>
 
   <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>

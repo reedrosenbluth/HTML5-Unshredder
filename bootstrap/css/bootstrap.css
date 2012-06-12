@@ -145,7 +145,7 @@ a {
 }
 a:hover {
   color: #005580;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 .row {
   margin-left: -20px;
@@ -4048,6 +4048,11 @@ h1.title {
   margin-top: 28px;
 }
 
+h2.thumbnails {
+  text-align: center;
+  margin-top: 40%;
+}
+
 p.by {
   text-align:center;
   margin-top: 20px;
@@ -4061,4 +4066,3 @@ p.by {
   margin-left: -140px;
   display: none;
 }
-

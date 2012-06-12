@@ -39,12 +39,27 @@ $dropzone.ondrop = function (e) {
     $('canvas').show();
     $('#drop_zone').hide();
     $('#buttons').show();
+    $('#thumbnails').hide();
   };
 
   reader.readAsDataURL(file);
 
   return false;
 };
+
+function loadImage(imgName) {
+  console.log("working");
+  var img = new Image;
+  img.onload = function() {
+    ctx.drawImage(img,0,0);
+  }
+  img.src = 'sample_images/' + imgName;
+  $('canvas').show();
+  $('#drop_zone').hide();
+  $('#buttons').show();
+  $('#thumbnails').hide();
+  return false;
+}
 
 
 function rgbToHue (r, g, b) {
