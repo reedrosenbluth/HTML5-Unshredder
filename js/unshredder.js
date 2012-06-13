@@ -7,6 +7,11 @@ var currentWidth = 0;
 var strips = [];
 var sequence = [];
 
+function init() {
+  if (!window.FileReader) {
+    alert("Sorry, this website is not fully supported by your browser. Please try it in Google Chrome or Mozilla Firefox");
+  }
+}
 
 $dropzone.ondragover = function () {
   this.className = 'hover';
@@ -89,6 +94,7 @@ function stripDistance(s, t) {
   return distances;
 }
 
+
 function unshred() {
   for (i = 0; i < 20; i++) {
     var imageData = ctx.getImageData(i*32, 0, 32, 359);
@@ -117,6 +123,9 @@ function unshred() {
       sequence.unshift(strips[indexL]);
       strips.splice(indexL, 1);
     }
+    // for (i = 0; i < k + 2; i++) {
+    //   ctx.putImageData(sequence[i], i*32, 0);
+    // }
   }
 
   for (i = 0; i < 20; i++) {
@@ -128,6 +137,6 @@ function unshred() {
 
 $('#startbutton').on('click', unshred);
 
-
+window.onload = init;
 
 
