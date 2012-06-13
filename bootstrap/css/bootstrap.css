@@ -4015,7 +4015,7 @@ a.thumbnail:hover {
   position:absolute;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -352px;
+  margin:-75px 0 0 -365px;
 }
 
 #drop_zone.hover {
@@ -4030,7 +4030,7 @@ a.thumbnail:hover {
   position:absolute;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -352px;
+  margin:-75px 0 0 -365px;
 }
     
 canvas {
@@ -4050,6 +4050,10 @@ h1.title {
 
 h2.thumbnails {
   text-align: center;
+  /*margin-top: 35%;*/
+}
+
+#thumbnails {
   margin-top: 35%;
 }
 
