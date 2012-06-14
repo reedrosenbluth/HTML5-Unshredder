@@ -57,7 +57,7 @@ function loadImage(imgName) {
   var img = new Image;
   img.onload = function() {
     ctx.drawImage(img,0,0);
-  }
+  };
   img.src = 'sample_images/' + imgName;
   $('canvas').show();
   $('#drop_zone').hide();

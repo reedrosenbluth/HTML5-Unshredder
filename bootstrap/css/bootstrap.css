@@ -4012,10 +4012,10 @@ a.thumbnail:hover {
   padding: 50px;
   text-align: center;
   width: 600px;
-  position:absolute;
+  position:relative;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -365px;
+  margin:200px 0 0 -355px;
 }
 
 #drop_zone.hover {
@@ -4027,34 +4027,37 @@ a.thumbnail:hover {
   padding: 50px;
   text-align: center;
   width: 600px;
-  position:absolute;
+  position:relative;
   left:50%;
   top:50%;
-  margin:-75px 0 0 -365px;
+  margin:200px 0 0 -355px;
 }
     
 canvas {
  /* border: 2px dashed #BBB;*/
   display: none; 
-  top: 47%;
+  top: 250px;
   left: 50%;
   margin: -170px 0 0 -320px;
   padding: 5px;
-  position: absolute;
+  position: relative;
 }
 
 h1.title {
   text-align: center;
   margin-top: 28px;
+  position: relative;
 }
 
 h2.thumbnails {
   text-align: center;
+  position: relative;
   /*margin-top: 35%;*/
 }
 
 #thumbnails {
-  margin-top: 35%;
+  margin-top: 100px;
+  position: relative;
 }
 
 p.by {
@@ -4065,8 +4068,8 @@ p.by {
 #buttons {
   left: 50%;
   /*padding: 10px 0 0 10px;*/
-  position: absolute;
-  top: 80%;
+  position: relative;
+  top: 300px;
   margin-left: -140px;
   display: none;
 }
