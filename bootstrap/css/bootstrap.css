@@ -4079,7 +4079,7 @@ a.by:hover {
 
 #loading {
   position: relative;
-  margin: 270px 450px 0px 450px;
+  margin: 270px 450px -450px 450px;
   display: none;
 }
 
