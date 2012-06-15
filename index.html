@@ -15,11 +15,12 @@
   <div id="mastheadbackground"></div>
   <div id="header">
     <h1 class="title"><a href="index.html">HTML5 Unshredder</a></h1>
-    <p class="by" id="autor">by Reed Rosenbluth</p>
+    <p class="by" id="author">by <a href="http://reedrosenbluth.com/" class="by">Reed Rosenbluth</a></p>
   </div>
 
   <div class="container">
     <div id="drop_zone"><h2>Drop image from desktop here</h2></div>
+    <img src="images/ajax-loader.gif" id="loading" />
     <canvas id="unshreddedImage" width=640 height=359></canvas>
   </div>
 
@@ -31,11 +32,11 @@
 
   <footer>
     <div id="thumbnails">
-      <h2 style="text-align: center">Or click on one of these sample images</h2>
+      <h2 style="text-align: center; white-space: nowrap">Or click on one of these sample images</h2>
       <h2 class="thumbnails">
-        <a id="tokyo" href="#" onclick="loadImage('tokyo.png')"><img src="sample_images/tokyo.png" alt="tokyo" width="200" /></a>
-        <a id="bridge" href="#" onclick="loadImage('bridge.png')"><img src="sample_images/bridge.png" alt="bridge" width="200" /></a>
-        <a id="flowers" href="#" onclick="loadImage('flowers.png')"><img src="sample_images/flowers.png" alt="flowers" width="200" /></a>
+        <a id="tokyo" href="#" onclick="return false" data-img="images/tokyo.png"><img src="images/thumbnails/tokyoT.png" alt="tokyo" width="200" /></a>
+        <a id="bridge" href="#" onclick="return false" data-img="images/bridge.png"><img src="images/thumbnails/bridgeT.png" alt="bridge" width="200" /></a>
+        <a id="flowers" href="#" onclick="return false" data-img="images/flowers.png"><img src="images/thumbnails/flowersT.png" alt="flowers" width="200" /></a>
       </h2>
     </div>
   </footer>

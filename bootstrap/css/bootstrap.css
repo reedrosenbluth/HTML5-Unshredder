@@ -324,7 +324,7 @@ a:hover {
 p {
   margin: 0 0 9px;
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Helvetica;
   font-size: 16px;
   line-height: 18px;
 }
@@ -341,7 +341,7 @@ p small {
 
 h1 {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Helvetica;
   font-weight: bold;
   color: #747B7B;
   text-rendering: optimizelegibility;
@@ -4045,24 +4045,42 @@ canvas {
 
 h1.title {
   text-align: center;
-  margin-top: 28px;
+  margin:28px 150px 0px 150px;
   position: relative;
+  white-space: nowrap;
 }
 
 h2.thumbnails {
   text-align: center;
   position: relative;
+  white-space: nowrap;
   /*margin-top: 35%;*/
 }
 
 #thumbnails {
-  margin-top: 100px;
   position: relative;
+  margin: 100px 150px 0px 150px;
 }
 
 p.by {
   text-align:center;
-  margin-top: 20px;
+  margin:20px 345px 0px 345px;
+  position: relative;
+  white-space: nowrap;
+}
+
+a.by {
+  color: #A0A0A0;
+}
+
+a.by:hover {
+  color: #C14B4B;
+}
+
+#loading {
+  position: relative;
+  margin: 270px 450px 0px 450px;
+  display: none;
 }
 
 #buttons {
@@ -4072,4 +4090,5 @@ p.by {
   top: 300px;
   margin-left: -140px;
   display: none;
+  width: 500px;
 }

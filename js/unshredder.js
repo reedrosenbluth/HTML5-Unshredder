@@ -52,13 +52,16 @@ $dropzone.ondrop = function (e) {
   return false;
 };
 
-function loadImage(imgName) {
-  console.log("working");
+function loadImage(e) {
+  e.preventDefault();
+  $('#loading').show();
+  var src = $(this).data('img');
   var img = new Image;
   img.onload = function() {
     ctx.drawImage(img,0,0);
+    $('#loading').hide();
   };
-  img.src = 'sample_images/' + imgName;
+  img.src = src;
   $('canvas').show();
   $('#drop_zone').hide();
   $('#buttons').show();
@@ -136,6 +139,7 @@ function unshred() {
 
 
 $('#startbutton').on('click', unshred);
+$('.thumbnails').find('a').click(loadImage);
 
 window.onload = init;
 
