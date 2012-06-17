@@ -4083,7 +4083,17 @@ a.by:hover {
   display: none;
 }
 
-#buttons {
+#button {
+  left: 50%;
+  /*padding: 10px 0 0 10px;*/
+  position: relative;
+  top: 300px;
+  margin-left: -140px;
+  display: none;
+  width: 500px;
+}
+
+#buttonR {
   left: 50%;
   /*padding: 10px 0 0 10px;*/
   position: relative;

@@ -43,7 +43,7 @@
       img.onload = function() {
         ctx.drawImage(img,0,0);
         $('#loading').hide();
-        $('#buttons').show();
+        $('#button').show();
       };
       img.src = event.target.result;
       $('canvas').show();
@@ -64,7 +64,7 @@
     img.onload = function() {
       ctx.drawImage(img,0,0);
       $('#loading').hide();
-      $('#buttons').show();
+      $('#button').show();
     };
     img.src = src;
     $('canvas').show();
@@ -138,11 +138,13 @@
     for (i = 0; i < 20; i++) {
       ctx.putImageData(sequence[i], i*32, 0);
     }
-    $('#buttons').hide();
+    $('#button').hide();
+    // $('#buttonR').show();
   }
 
 
   $('#startbutton').on('click', unshred);
+  // $('#restartbutton').on('click', console.log("testing")); // reloading all the time for some reason
   $('.thumbnails').find('a').click(loadImage);
 
   window.onload = init;
