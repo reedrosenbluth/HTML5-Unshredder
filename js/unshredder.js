@@ -9,11 +9,11 @@
   var strips = [];
   var sequence = [];
 
-  function init() {
+  $(function() {
     if (!window.FileReader) {
       alert("Sorry, this website is not fully supported by your browser. Please try it in Google Chrome or Mozilla Firefox");
     }
-  }
+  });
 
   $dropzone.ondragover = function () {
     this.className = 'hover';
@@ -103,7 +103,7 @@
 
 
   function unshred() {
-    for (i = 0; i < 20; i++) {
+    for (var i = 0; i < 20; i++) {
       var imageData = ctx.getImageData(i*32, 0, 32, 359);
       strips.push(imageData);
     }
@@ -112,7 +112,7 @@
     sequence.push(strips[0]);
     strips.splice(0, 1);
 
-    for (k = 0; k < 19; k++) {
+    function unshredHelper(k) {
       var distancesR = [];
       var distancesL = [];
       for (j = 0; j < (19 - k); j++) {
@@ -130,23 +130,30 @@
         sequence.unshift(strips[indexL]);
         strips.splice(indexL, 1);
       }
-      // for (i = 0; i < k + 2; i++) {
-      //     ctx.putImageData(sequence[i], i*32, 0);
-      // }
+      for (i = 0; i < k + 2; i++) {
+        ctx.putImageData(sequence[i], i*32, 0);
+      }
+      if (k < 19) {
+        setTimeout(function() {
+          unshredHelper(k+1);
+        }, 250);
+      }
     }
 
-    for (i = 0; i < 20; i++) {
-      ctx.putImageData(sequence[i], i*32, 0);
-    }
+    unshredHelper(0);
+
+    // for (i = 0; i < 20; i++) {
+    //   ctx.putImageData(sequence[i], i*32, 0);
+    // }
     $('#button').hide();
-    // $('#buttonR').show();
+    $('#buttonR').show();
   }
 
 
   $('#startbutton').on('click', unshred);
-  // $('#restartbutton').on('click', console.log("testing")); // reloading all the time for some reason
+  $('#restartbutton').on('click', function() {
+    window.location.reload()
+  });
   $('.thumbnails').find('a').click(loadImage);
-
-  window.onload = init;
 
 })(this, document);
